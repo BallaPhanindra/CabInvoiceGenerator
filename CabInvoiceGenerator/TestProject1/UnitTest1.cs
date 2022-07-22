@@ -20,11 +20,12 @@ namespace TestProject1
         [Test]
         public void GivenDistanceAndTimeShouldReturnTotalFareForPREMIUM_Ride()
         {
-            double distance = 10.0;
-            int time = 10;
+            double distance = 15.0;
+            int time = 15;
 
-            double fare_PREMIUM = invoiceGenerator_PREMIUM.CalculateFare(15.0, 15); //Premium Ride
-            double expected_PREMIUM = 215;
+            double fare_PREMIUM = invoiceGenerator_PREMIUM.CalculateFare(distance
+                , time); //Premium Ride
+            double expected_PREMIUM = 255;
 
             Assert.AreEqual(expected_PREMIUM, fare_PREMIUM); // for Premium Ride
         }
@@ -32,11 +33,11 @@ namespace TestProject1
         [Test]
         public void GivenDistanceAndTimeShouldReturnTotalFareForNORMAL_Ride()
         {
-            double distance = 10.0;
-            int time = 10;
+            double distance = 15.0;
+            int time = 15;
 
-            double fare_NORMAL = invoiceGenerator_NORMAL.CalculateFare(10.0, 10); //Normal Ride
-            double expected_Normal = 125;
+            double fare_NORMAL = invoiceGenerator_NORMAL.CalculateFare(distance, time); //Normal Ride
+            double expected_Normal = 165;
 
             Assert.AreEqual(expected_Normal, fare_NORMAL); // for Normal Ride
         }
